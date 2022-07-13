@@ -61,6 +61,32 @@ public class Task {
 		{
 			e.printStackTrace();
 		}
+		/*try {
+			FileReader file=new FileReader(file1);
+			BufferedReader br=new BufferedReader(file);
+			FileWriter writer=new FileWriter(file2);
+			String input;
+			while((input=br.readLine())!=null)
+			{
+				
+				String[] arrOfStr= input.split(" ");
+				String w1=arrOfStr[0];
+				String w2=arrOfStr[1];				
+				
+				if(c.isAnagram(w1,w2))
+					writer.write(w1+" "+w2+"\n");				
+			
+			}
+			br.close();
+			writer.close();
+
+		}catch(FileNotFoundException e)
+		{
+			e.printStackTrace();
+		}catch(IOException e)
+		{
+			e.printStackTrace();
+		}*/
 
 	}
 
