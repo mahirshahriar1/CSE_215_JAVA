@@ -40,4 +40,19 @@ public class Point {
 	public String toString() {
 		return "Point[x: " + x + ", y: " + y + "]";
 	}
+	
+	public double distanceTo(Point x)
+	{
+		int dx = this.x - x.getX();
+		int dy = this.y - x.getY();
+		return Math.sqrt((dx * dx) + (dy * dy));
+	}
+	
+	public double distanceTo(Point x, Point y)
+	{
+		int dx = y.getX() - x.getX();
+		int dy = y.getY() - x.getY();
+		return Math.sqrt((dx * dx) + (dy * dy));
+	}
+	
 }
