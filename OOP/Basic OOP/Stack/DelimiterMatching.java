@@ -16,6 +16,8 @@ public class DelimiterMatching {
 								item != '{') || (ch == ']' && item != '['))
 							return false;
 					}
+					else
+						return false; // without this step, the method returns true in the Test Case-> "]" .. 
 				}
 			}
 			if (!s.isStackEmpty())
