@@ -1,0 +1,1 @@
+two simple examples to understand Interface and abstract Classes
