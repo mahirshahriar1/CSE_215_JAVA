@@ -59,3 +59,50 @@ public class Deser {
 	}
 
 }
+
+/*public class Deser {
+
+	public static void main(String[] args) {
+		File file = new File("Employee.ser");
+
+		FileInputStream fis = null;
+		ObjectInputStream ois = null;
+
+		try {
+
+			fis = new FileInputStream(file);
+			ois = new ObjectInputStream(fis);
+
+			Object[] obj;
+			Employee[] employee = null;
+
+			try {
+				obj = (Object[]) ois.readObject();
+				employee = (Employee[]) obj;
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+			System.out.println(employee.length);
+			for (int i = 0; i < employee.length; i++) {
+				System.out.println("Name: " + employee[i].getName());
+				System.out.println("ID: " + employee[i].getId());
+				System.out.println();
+			}
+
+			System.out.println("Deserialization done successfully!!");
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				fis.close();
+				ois.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+}
